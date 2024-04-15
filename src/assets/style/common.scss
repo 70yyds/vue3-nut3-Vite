@@ -1,0 +1,98 @@
+/* 外边距、内边距全局样式
+------------------------------- */
+@for $i from 1 through 35 {
+  .mg#{$i} {
+		margin: #{$i}px !important;
+	}
+	.mt#{$i} {
+		margin-top: #{$i}px !important;
+	}
+	.-mt#{$i} {
+		margin-top: -#{$i}px !important;
+	}
+	.mr#{$i} {
+		margin-right: #{$i}px !important;
+	}
+	.-ml#{$i} {
+		margin-left: -#{$i}px !important;
+	}
+	.mb#{$i} {
+		margin-bottom: #{$i}px !important;
+	}
+	.ml#{$i} {
+		margin-left: #{$i}px !important;
+	}
+	.mx#{$i}{
+		margin:0px #{$i}px !important;
+	}
+  .pg#{$i} {
+		padding: #{$i}px !important;
+	}
+	.pt#{$i} {
+		padding-top: #{$i}px !important;
+	}
+	.pr#{$i} {
+		padding-right: #{$i}px !important;
+	}
+	.pb#{$i} {
+		padding-bottom: #{$i}px !important;
+	}
+	.pl#{$i} {
+		padding-left: #{$i}px !important;
+	}
+}
+/* 字体大小全局样式
+------------------------------- */
+@for $i from 10 through 32 {
+	.font#{$i} {
+		font-size: #{$i}px !important;
+	}
+}
+
+// 通用宽高
+.w-full{
+	width: 100%;
+	max-width: unset !important;
+}
+.h-full{
+	height: 100%;
+}
+// 通用布局
+.inline-block{
+	display: inline-block !important;
+}
+.block{
+	display: block !important;
+}
+.flex{
+	display: flex;
+}
+.flex-v{
+	display: flex;
+	flex-direction: column;
+}
+.flex-h{
+	display: flex;
+	flex-direction: row;
+}
+.justify-center{
+	justify-content: center;
+}
+.align-center{
+	align-items: center;
+}
+.pointer{
+  cursor: pointer;
+}
+.text-center{
+	text-align: center;
+}
+.zIndex1{
+	position: relative;
+	z-index: 1;
+}
+.truncate{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
