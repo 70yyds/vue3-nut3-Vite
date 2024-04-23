@@ -1,6 +1,6 @@
 <template>
-  <div class='mineContainer'>
-    this is mine
+  <div class='workContainer'>
+    this is work
   </div>
 </template>
 <script setup lang='js'>
@@ -17,7 +17,7 @@ onMounted(() => {
 })
 </script>
 <style lang='scss' scoped>
-.mineContainer {
+.workContainer {
   height: 50px;
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <div class=''>
+  <div class='loginContainer'>
+    this is login
   </div>
 </template>
 <script setup lang='js'>
@@ -15,6 +16,6 @@ onMounted(() => {
 
 })
 </script>
-<style lang='' scoped>
-
+<style lang='scss' scoped>
+.loginContainer {}
 </style>

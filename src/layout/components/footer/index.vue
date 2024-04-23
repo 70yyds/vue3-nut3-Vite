@@ -10,12 +10,31 @@
 </template>
 <script setup lang='js'>
 import { onMounted, ref, reactive, getCurrentInstance } from 'vue';
+import { useRoute, useRouter } from 'vue-router'
+const router = useRouter()
+const route = useRoute()
 const { proxy } = getCurrentInstance()
 const active = ref()
 onMounted(() => {
 })
 const tabSwitch = (item, index) => {
-  console.log(item, index);
+  switch (index) {
+    case 0:
+      router.push({ path: '/home' })
+      break;
+    case 1:
+      router.push({ path: '/work' })
+      break;
+    case 2:
+      router.push({ path: '/message' })
+      break;
+    case 3:
+      router.push({ path: '/mine' })
+      break;
+
+    default:
+      break;
+  }
 }
 </script>
 <style lang='scss' scoped>

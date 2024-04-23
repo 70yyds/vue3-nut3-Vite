@@ -1,6 +1,6 @@
 <template>
-  <div class='mineContainer'>
-    this is mine
+  <div class='emptyError'>
+    404 page not found
   </div>
 </template>
 <script setup lang='js'>
@@ -17,7 +17,5 @@ onMounted(() => {
 })
 </script>
 <style lang='scss' scoped>
-.mineContainer {
-  height: 50px;
-}
+.emptyError {}
 </style>
