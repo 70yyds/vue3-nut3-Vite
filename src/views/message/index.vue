@@ -1,5 +1,5 @@
 <template>
-  <div class='msgContainer'>
+  <div class='appContainer'>
     this is msg
   </div>
 </template>
@@ -16,8 +16,4 @@ onMounted(() => {
 
 })
 </script>
-<style lang='scss' scoped>
-.msgContainer {
-  height: 50px;
-}
-</style>
+<style lang='scss' scoped></style>

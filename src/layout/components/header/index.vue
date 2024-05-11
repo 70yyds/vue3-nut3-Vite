@@ -1,14 +1,13 @@
 <template>
-  <div class='headerContainer'>
-    <nut-navbar @on-click-back="back" @on-click-title="title" :title="route.meta.title">
-      <template #left>
+  <nut-navbar @on-click-back="back" @on-click-title="title" left-show fixed :z-index="1" safe-area-inset-top
+    :title="route.meta.title">
+    <!-- <template #left>
         <div>返回</div>
-      </template>
-      <template #right>
-        <nut-icon class="right" name="share-n"></nut-icon>
-      </template>
-    </nut-navbar>
-  </div>
+      </template> -->
+    <template #right>
+      <nut-icon class="right" name="share-n"></nut-icon>
+    </template>
+  </nut-navbar>
 </template>
 <script setup lang='js'>
 import { onMounted, ref, reactive, getCurrentInstance } from 'vue';
@@ -32,5 +31,12 @@ const back = () => {
 }
 </script>
 <style lang='scss' scoped>
-.headerContainer {}
+.nut-navbar--placeholder {
+  height: 44px !important;
+}
+
+:deep(.nut-navbar) {
+  margin-bottom: 0px;
+  box-shadow: 0 1px 7px #edeef1;
+}
 </style>

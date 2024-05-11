@@ -1,6 +1,6 @@
 <template>
   <section class="app-main">
-    <Header />
+    <Header v-if="isWeChatWeb()" />
     <router-view v-slot="{ Component, route }">
       <keep-alive :include="includeRoute">
         <component :is="Component" :key="route.path" />
@@ -21,10 +21,18 @@ const props = defineProps({
   },
 });
 const includeRoute = ref([])
+
 onMounted(() => {
 
 })
+// 判断是否为微信浏览器
+const isWeChatWeb = () => {
+  let ua = navigator.userAgent.toLowerCase();
+  return !/micromessenger/.test(ua)
+}
 </script>
 <style lang='scss' scoped>
-.app-main {}
+.app-main {
+  height: 100%;
+}
 </style>

@@ -1,14 +1,22 @@
-@import './common.scss';
-html,body{
+@import "./common.scss";
+@import "./nust.scss";
+html,
+body {
   width: 100vw;
+  height: 100vh;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-size: 16px;
+  border: none;
 }
-*{
+* {
   
 }
-ul{
+ul {
   list-style: none;
 }
 
+#app{
+  height: 100%;
+}

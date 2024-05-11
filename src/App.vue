@@ -1,7 +1,5 @@
 <template>
-  <div class='appContainer'>
-    <router-view />
-  </div>
+  <router-view />
 </template>
 <script setup lang='js'>
 import { onMounted, ref, reactive, getCurrentInstance } from 'vue';
@@ -11,6 +9,4 @@ onMounted(() => {
 
 })
 </script>
-<style lang='scss' scoped>
-.appContainer {}
-</style>
+<style lang='scss' scoped></style>
