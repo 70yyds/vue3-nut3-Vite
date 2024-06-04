@@ -5,12 +5,13 @@
         <div>返回</div>
       </template> -->
     <template #right>
-      <nut-icon class="right" name="share-n"></nut-icon>
+      <Share />
     </template>
   </nut-navbar>
 </template>
 <script setup lang='js'>
 import { onMounted, ref, reactive, getCurrentInstance } from 'vue';
+import { Share } from '@nutui/icons-vue'
 import { useRoute } from 'vue-router'
 const route = useRoute()
 const { proxy } = getCurrentInstance()

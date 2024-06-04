@@ -17,7 +17,7 @@
           <nut-input class="font15" placeholder="请输入密码" type="password" />
         </nut-form-item>
         <nut-form-item>
-          <nut-button size="large" type="primary">登录</nut-button>
+          <nut-button size="large" type="primary" @click="handleLogin">登录</nut-button>
         </nut-form-item>
       </nut-form>
     </div>
@@ -26,6 +26,9 @@
 <script setup lang='js'>
 import { onMounted, ref, reactive, getCurrentInstance } from 'vue';
 const { proxy } = getCurrentInstance()
+import { useRoute, useRouter } from 'vue-router'
+const router = useRouter()
+const route = useRoute()
 const props = defineProps({
   modelValue: {
     type: Boolean,
@@ -35,6 +38,10 @@ const props = defineProps({
 onMounted(() => {
 
 })
+const handleLogin = () => {
+  router.push({ path: '/' })
+}
+
 </script>
 <style lang='scss' scoped>
 .loginContainer {

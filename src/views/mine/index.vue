@@ -12,24 +12,31 @@
       <ul>
         <li class="list_item">
           <div class="title">
-            <nut-icon name="people"></nut-icon>
+            <People />
             <div class="ml20 truncate">个人信息</div>
           </div>
-          <nut-icon name="rect-right"></nut-icon>
+          <RectRight />
         </li>
         <li class="list_item">
           <div class="title">
-            <nut-icon name="retweet"></nut-icon>
+            <Retweet />
             <div class="ml20 truncate">角色切换</div>
           </div>
-          <nut-icon name="rect-right"></nut-icon>
+          <RectRight />
         </li>
         <li class="list_item">
           <div class="title">
-            <nut-icon name="setting"></nut-icon>
+            <Setting />
             <div class="ml20 truncate">设置</div>
           </div>
-          <nut-icon name="rect-right"></nut-icon>
+          <RectRight />
+        </li>
+        <li class="list_item">
+          <div class="title">
+            <Find />
+            <div class="ml20 truncate">退出登录</div>
+          </div>
+          <RectRight />
         </li>
       </ul>
     </div>
@@ -37,6 +44,7 @@
 </template>
 <script setup lang='js'>
 import { onMounted, ref, reactive, getCurrentInstance } from 'vue';
+import { People, Retweet, Setting, RectRight, Find } from '@nutui/icons-vue'
 const { proxy } = getCurrentInstance()
 const props = defineProps({
   modelValue: {
