@@ -2,7 +2,7 @@ const useAppStore = defineStore(
   'permission',
   {
     state: () => ({
-
+      routes: []
     }),
     actions: {
       setRouter(size) {

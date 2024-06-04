@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@nutui/icons-vue": "^0.1.1",
-    "@nutui/nutui": "^3.3.8",
+    "@nutui/nutui": "^4.3.9",
     "axios": "^1.6.8",
     "consola": "^3.2.3",
     "file-saver": "^2.0.5",

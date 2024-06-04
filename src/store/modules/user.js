@@ -3,7 +3,8 @@ const useAppStore = defineStore(
   'user',
   {
     state: () => ({
-
+      role: '',
+      userInfo: {}
     }),
     actions: {
       setUserInfo(size) {

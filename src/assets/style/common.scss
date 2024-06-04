@@ -1,46 +1,59 @@
 /* 外边距、内边距全局样式
 ------------------------------- */
 @for $i from 1 through 35 {
-  .mg#{$i} {
+	.mg#{$i} {
 		margin: #{$i}px !important;
 	}
+
 	.mt#{$i} {
 		margin-top: #{$i}px !important;
 	}
+
 	.-mt#{$i} {
 		margin-top: -#{$i}px !important;
 	}
+
 	.mr#{$i} {
 		margin-right: #{$i}px !important;
 	}
+
 	.-ml#{$i} {
 		margin-left: -#{$i}px !important;
 	}
+
 	.mb#{$i} {
 		margin-bottom: #{$i}px !important;
 	}
+
 	.ml#{$i} {
 		margin-left: #{$i}px !important;
 	}
-	.mx#{$i}{
+
+	.mx#{$i} {
 		margin:0px #{$i}px !important;
 	}
-  .pg#{$i} {
+
+	.pg#{$i} {
 		padding: #{$i}px !important;
 	}
+
 	.pt#{$i} {
 		padding-top: #{$i}px !important;
 	}
+
 	.pr#{$i} {
 		padding-right: #{$i}px !important;
 	}
+
 	.pb#{$i} {
 		padding-bottom: #{$i}px !important;
 	}
+
 	.pl#{$i} {
 		padding-left: #{$i}px !important;
 	}
 }
+
 /* 字体大小全局样式
 ------------------------------- */
 @for $i from 10 through 32 {
@@ -49,55 +62,76 @@
 	}
 }
 
+.bold {
+	font-weight: bold;
+}
+
 // 通用宽高
-.w-full{
+.w-full {
 	width: 100%;
 	max-width: unset !important;
 }
-.h-full{
+
+.h-full {
 	height: 100%;
 }
+
 // 通用布局
-.inline-block{
+.inline-block {
 	display: inline-block !important;
 }
-.block{
+
+.block {
 	display: block !important;
 }
-.flex{
+
+.flex {
 	display: flex;
 }
-.flex-v{
+
+.flex-v {
 	display: flex;
 	flex-direction: column;
 }
-.flex-h{
+
+.flex-h {
 	display: flex;
 	flex-direction: row;
 }
-.justify-center{
+
+.justify-center {
 	justify-content: center;
 }
-.align-center{
+
+.align-center {
 	align-items: center;
 }
-.pointer{
-  cursor: pointer;
+
+.pointer {
+	cursor: pointer;
 }
-.text-center{
+
+.text-center {
 	text-align: center;
 }
-.zIndex1{
+
+.zIndex1 {
 	position: relative;
 	z-index: 1;
 }
-.truncate{
+
+.truncate {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 }
+
 // 通用容器类
-.appContainer{
+.appContainer {
 	width: 100%;
 	height: calc(100% - 94px);
+}
+
+:root {
+	--primary-color: #1989fa;
 }
