@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-
+import { setToken } from '@/utils/auth'
 const useAppStore = defineStore(
   'app',
   {
@@ -11,6 +11,9 @@ const useAppStore = defineStore(
         this.size = size;
         Cookies.set('size', size)
       },
+      Login() {
+        setToken('123')
+      }
     }
   })
 

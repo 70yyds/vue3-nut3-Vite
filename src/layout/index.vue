@@ -1,6 +1,6 @@
 <template>
   <section class="app-main">
-    <Header v-if="isWeChatWeb()" />
+    <!-- <Header v-if="isWeChatWeb()" /> -->
     <router-view v-slot="{ Component, route }">
       <keep-alive :include="includeRoute">
         <component :is="Component" :key="route.path" />
@@ -34,5 +34,8 @@ const isWeChatWeb = () => {
 <style lang='scss' scoped>
 .app-main {
   height: 100%;
+  background-image: url('@/assets/images/appBack.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

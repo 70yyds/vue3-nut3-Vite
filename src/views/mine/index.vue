@@ -1,10 +1,25 @@
 <template>
   <div class='appContainer'>
     <div class="mine_header">
-      <div class="mine_avatar">
+      <div class="header_avatar">
         <img src="@/assets/images/avatar.jpg" alt="" width="100%" height="100%" @error="errorImage">
-        <div class="mine_name mt5 font15">
-          POMELO
+        <div class="mine_info bold font19">
+          <div class="userName">POMELO</div>
+          <div class="userRole font16">学生</div>
+        </div>
+        <div class="class_num mt25">
+          <div class="header_list text-center">
+            <div class="bold font17">26</div>
+            <div class="font15">已收藏</div>
+          </div>
+          <div class="header_list text-center">
+            <div class="bold font17">27</div>
+            <div class="font15">正在学习</div>
+          </div>
+          <div class="header_list text-center">
+            <div class="bold font17">28</div>
+            <div class="font15">已学习</div>
+          </div>
         </div>
       </div>
     </div>
@@ -31,7 +46,7 @@
           </div>
           <RectRight />
         </li>
-        <li class="list_item">
+        <li class="list_item" @click="logOut">
           <div class="title">
             <Find />
             <div class="ml20 truncate">退出登录</div>
@@ -55,65 +70,15 @@ const props = defineProps({
 onMounted(() => {
 
 })
+
+const logOut = () => {
+
+}
+
 const errorImage = (event) => {
   event.target.src = new URL(`@/assets/images/avatar.jpg`, import.meta.url).href
 }
 </script>
 <style lang='scss' scoped>
-.appContainer {
-  position: relative;
-
-  .mine_header {
-    height: 45%;
-    background: url('@/assets/images/mine_back.png') no-repeat;
-    background-size: cover;
-    position: relative;
-
-    .mine_avatar {
-      width: 8rem;
-      height: 8rem;
-      border-radius: 50%;
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -40%);
-
-      img {
-        max-width: 8rem;
-        border-radius: 50%;
-      }
-
-      .mine_name {
-        text-align: center;
-        color: white;
-      }
-    }
-  }
-
-  .mine_body {
-    height: 100%;
-    border-radius: 1.5rem 1.5rem 0 0;
-    margin-top: -2rem;
-    background-color: #fff;
-    position: relative;
-
-    ul {
-      padding: 1rem 2rem;
-    }
-
-    .list_item {
-      height: 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 1rem 0;
-
-      .title {
-        width: 85%;
-        display: flex;
-        align-items: center;
-      }
-    }
-  }
-}
+@import './index.scss';
 </style>

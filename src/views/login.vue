@@ -11,10 +11,10 @@
       </div>
       <nut-form class="login_form pg20">
         <nut-form-item>
-          <nut-input class="font15" placeholder="请输入账号" />
+          <nut-input class="font16" placeholder="请输入账号" />
         </nut-form-item>
         <nut-form-item>
-          <nut-input class="font15" placeholder="请输入密码" type="password" />
+          <nut-input class="font16" placeholder="请输入密码" type="password" />
         </nut-form-item>
         <nut-form-item>
           <nut-button size="large" type="primary" @click="handleLogin">登录</nut-button>
@@ -25,10 +25,10 @@
 </template>
 <script setup lang='js'>
 import { onMounted, ref, reactive, getCurrentInstance } from 'vue';
-const { proxy } = getCurrentInstance()
 import { useRoute, useRouter } from 'vue-router'
+import useAppStore from '@/store/modules/app.js'
+const { proxy } = getCurrentInstance()
 const router = useRouter()
-const route = useRoute()
 const props = defineProps({
   modelValue: {
     type: Boolean,
@@ -46,10 +46,9 @@ const handleLogin = () => {
 <style lang='scss' scoped>
 .loginContainer {
   height: 100%;
-  background: url('@/assets/images/Top_Photo.png');
+  background-image: url('@/assets/images/appBack.png');
   background-repeat: no-repeat;
-  background-position-x: 80px;
-  background-position-y: -50px;
+  background-size: cover;
 
   .login_wrap {
     width: 100%;
@@ -57,6 +56,14 @@ const handleLogin = () => {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    :deep(.nut-cell-group__wrap) {
+      background: none;
+    }
+
+    :deep(.nut-cell) {
+      background: none;
+    }
   }
 
   .login_img {}

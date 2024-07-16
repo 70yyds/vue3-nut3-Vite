@@ -4,7 +4,7 @@
 html,
 body {
   width: 100vw;
-  height: 100vh;
+  height: -webkit-fill-available; //高度自适应可用视窗高度
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
