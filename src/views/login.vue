@@ -5,8 +5,8 @@
         <img src="@/assets/images/logo.png">
       </div>
       <div class=" login_tip pl35 pr35 pt10">
-        <h1 class="bold">上海开放大学</h1>
-        <h3 class="bold" style="color:gray">SHANGHAI OPEN UNIVERSITY</h3>
+        <h1 class="bold">THIS IS NAME</h1>
+        <h3 class="bold" style="color:gray">THIS IS ENGLISH NAME</h3>
 
       </div>
       <nut-form class="login_form pg20">
