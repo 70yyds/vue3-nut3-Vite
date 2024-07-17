@@ -11,6 +11,7 @@
     "@nutui/nutui": "^4.3.9",
     "axios": "^1.6.8",
     "consola": "^3.2.3",
+    "dplayer": "^1.27.1",
     "file-saver": "^2.0.5",
     "js-cookie": "^3.0.5",
     "pinia": "^2.1.7",

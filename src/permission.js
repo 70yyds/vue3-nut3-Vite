@@ -7,7 +7,7 @@ router.beforeEach((to, from, next) => {
     document.title = to.meta.title ? to.meta.title : 'luck-web'
   }
   if (getToken()) {
-    next({ path: '/' })
+    next()
   } else {
     if (to.path == '/login') {
       next()

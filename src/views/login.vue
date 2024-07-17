@@ -11,10 +11,10 @@
       </div>
       <nut-form class="login_form pg20">
         <nut-form-item>
-          <nut-input class="font16" placeholder="请输入账号" />
+          <nut-input v-model="loginForm.userName" class="font16" placeholder="请输入账号" />
         </nut-form-item>
         <nut-form-item>
-          <nut-input class="font16" placeholder="请输入密码" type="password" />
+          <nut-input v-model="loginForm.passWord" class="font16" placeholder="请输入密码" type="password" />
         </nut-form-item>
         <nut-form-item>
           <nut-button size="large" type="primary" @click="handleLogin">登录</nut-button>
@@ -26,20 +26,22 @@
 <script setup lang='js'>
 import { onMounted, ref, reactive, getCurrentInstance } from 'vue';
 import { useRoute, useRouter } from 'vue-router'
-import useAppStore from '@/store/modules/app.js'
+import useUserStore from '@/store/modules/user.js'
+const userStore = useUserStore()
 const { proxy } = getCurrentInstance()
 const router = useRouter()
-const props = defineProps({
-  modelValue: {
-    type: Boolean,
-    default: false
-  },
-});
+const loginForm = reactive({
+  userName: '',
+  passWord: ''
+})
 onMounted(() => {
 
 })
 const handleLogin = () => {
-  router.push({ path: '/' })
+  userStore.Login(loginForm).then(res => {
+    router.push({ path: '/' })
+  }).catch(e => {
+  })
 }
 
 </script>

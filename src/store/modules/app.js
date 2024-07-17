@@ -1,19 +1,16 @@
 import Cookies from 'js-cookie'
-import { setToken } from '@/utils/auth'
 const useAppStore = defineStore(
   'app',
   {
     state: () => ({
-
+      roleId: 1
     }),
     actions: {
       setSize(size) {
         this.size = size;
         Cookies.set('size', size)
       },
-      Login() {
-        setToken('123')
-      }
+      
     }
   })
 

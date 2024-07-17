@@ -60,19 +60,16 @@
 <script setup lang='js'>
 import { onMounted, ref, reactive, getCurrentInstance } from 'vue';
 import { People, Retweet, Setting, RectRight, Find } from '@nutui/icons-vue'
+import useUserStore from '@/store/modules/user.js'
+const userStore = useUserStore()
 const { proxy } = getCurrentInstance()
-const props = defineProps({
-  modelValue: {
-    type: Boolean,
-    default: false
-  },
-});
+
 onMounted(() => {
 
 })
 
 const logOut = () => {
-
+  userStore.Logout()
 }
 
 const errorImage = (event) => {
